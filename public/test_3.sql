@@ -42,7 +42,7 @@ VALUES ('Staff', 1), ('Supervisor', 2), ('Manager', 3);
 INSERT INTO karyawan (nik, nama, ttl, alamat, id_jabatan)
 VALUES ('0123456789', 'Anggun Pribadi', '1990-03-23', 'Jl. Assyafiiyah', 3, 1),
 ('1234567890', 'Arif Rahman Hakim', '1992-06-01', 'Jl. Kenangan', 2, 2),
-('2345678901', 'Cholid Romli', '1986-01-10', 'Jl. Patriot', 1, 3);
+('2345678901', 'Cholid Romli', '1986-01-10', 'Jl. Patriot Dalam III', 1, 3);
 
 -- SELECT DATA
 SELECT a.*, b.nama_jabatan, c.nama_level, d.nama_dept FROM karyawan AS a
