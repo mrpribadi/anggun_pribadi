@@ -1,17 +1,17 @@
 <?php
 
-function format_uang($uang)
+function format_uang($nilai)
 {
-    if ($uang == '') {
+    if ($nilai == '') {
         return 'Rp. 0';
     }
 
-    return 'Rp. ' . number_format($uang, 0, ",", ".");
+    return 'Rp. ' . number_format($nilai, 0, ",", ".");
 }
 
-function terbilang($uang)
+function terbilang($nilai)
 {
-    $angka = abs($uang);
+    $angka = abs($nilai);
     $baca = array('', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas');
     $terbilang = '';
 
