@@ -14,12 +14,15 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('department')->insert([
-            'nama_dept' => 'IT'
-        ], [
-            'nama_dept' => 'Finance'
-        ], [
-            'nama_dept' => 'HRD'
-        ]);
+        $data = [
+            [
+                'nama_dept' => 'IT'
+            ], [
+                'nama_dept' => 'Finance'
+            ], [
+                'nama_dept' => 'HRD'
+            ]
+        ];
+        DB::table('department')->insert($data);
     }
 }

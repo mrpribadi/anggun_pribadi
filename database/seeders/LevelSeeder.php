@@ -14,12 +14,15 @@ class LevelSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('level')->insert([
-            'nama_level' => 'Junior'
-        ], [
-            'nama_level' => 'Officer'
-        ], [
-            'nama_level' => 'Senior'
-        ]);
+        $data = [
+            [
+                'nama_level' => 'Junior'
+            ], [
+                'nama_level' => 'Officer'
+            ], [
+                'nama_level' => 'Senior'
+            ]
+        ];
+        DB::table('level')->insert($data);
     }
 }
