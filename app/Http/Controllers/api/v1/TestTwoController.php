@@ -21,7 +21,7 @@ class TestTwoController extends Controller
                 'data'    => null
             ], 401);
         } else {
-            $response = array('nominal' => format_uang($request->nilai), 'terbilang' => terbilang($request->nilai));
+            $response = array('nominal' => format_uang($request->nilai), 'terbilang' => str_replace("  ", " ", ucwords(terbilang($request->nilai) . 'rupiah')));
             return response()->json([
                 'success' => true,
                 'message' => 'Berhasil',
