@@ -4,7 +4,9 @@ namespace App\Http\Controllers\api\v1;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 
 class TestOneController extends Controller
 {
@@ -22,7 +24,7 @@ class TestOneController extends Controller
                 'data'    => null
             ], 401);
         } else {
-            $star = '<br>';
+            $star = '';
             if ($request->tipe == '1') {
                 for ($i = 1; $i <= $request->nilai; $i++) {
                     for ($j = 1; $j <= $i; $j++) {
@@ -57,11 +59,18 @@ class TestOneController extends Controller
             }
 
 
-            return response()->json([
-                'success' => true,
-                'message' => 'Berhasil',
-                'data'    => $star
-            ], 200);
+            // return response()->json([
+            //     'success' => true,
+            //     'message' => 'Berhasil',
+            //     'data'    => $star
+            // ], 200);
+
+            // $contents = View::make('star')->with('star', $star);
+            // $response = Response::make($contents, 200);
+            // $response->header('Content-Type', 'text/plain');
+            // return $response;
+
+            return response()->view('star', compact('star'));
         }
     }
 }
