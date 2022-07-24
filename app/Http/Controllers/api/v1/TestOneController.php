@@ -65,11 +65,6 @@ class TestOneController extends Controller
             //     'data'    => $star
             // ], 200);
 
-            // $contents = View::make('star')->with('star', $star);
-            // $response = Response::make($contents, 200);
-            // $response->header('Content-Type', 'text/plain');
-            // return $response;
-
             return response()->view('star', compact('star'));
         }
     }
